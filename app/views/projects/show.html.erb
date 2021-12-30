@@ -1,0 +1,14 @@
+<h1><%= @project.title %></h1>
+
+<h2>Built with:</h2>
+
+<ul>
+  <% @project.technologies.each do |technology| %>
+    <li>
+      <a href="<%= technology.url %>">
+        <img src="<%= technology.icon_url %>" style="width: 24px; height: 24px;" />
+        <%= technology.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>

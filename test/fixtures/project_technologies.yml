@@ -1,0 +1,5 @@
+<% (1..100).each do |i| %>
+projecttechnology<%= i %>:
+  project: project<%= i %>
+  technology: technology<%= i %>
+<% end %>

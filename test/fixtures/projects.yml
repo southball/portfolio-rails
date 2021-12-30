@@ -1,0 +1,5 @@
+<% (1..100).each do |i| %>
+project<%= i %>:
+  title: Project <%= i %>
+  slug: project<%= i %>
+<% end %>

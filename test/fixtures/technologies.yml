@@ -1,0 +1,7 @@
+<% (1..100).each do |i| %>
+technology<%= i %>:
+  name: Technology <%= i %>
+  slug: technology<%= i %>
+  url: https://example.com/technology<%= i %>
+  icon_url: https://example.com/icons/technology<%= i %>.png
+<% end %>
