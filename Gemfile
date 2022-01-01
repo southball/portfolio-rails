@@ -44,8 +44,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-gem 'minitest-reporters', '1.4.3'
-
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
@@ -79,6 +77,11 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'minitest'
+  gem 'minitest-reporters', '1.4.3'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
