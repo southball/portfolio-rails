@@ -44,8 +44,9 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-gem 'bootstrap', '~> 4.3.1'
-gem 'jquery-rails'
+gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails', '~> 4.4.0'
+gem 'popper_js', '~> 2.9.3'
 
 # Use Sass to process CSS
 gem 'sassc-rails'
