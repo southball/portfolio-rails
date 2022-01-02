@@ -2,11 +2,11 @@
 
 <%= link_to "Project Home Page", @technology.url %>
 
-<h2>Projects made with:</h2>
+<h2 class="mt-3">Projects made with:</h2>
 <div class="row">
-  <div class="col-12 col-sm-6 col-md-4">
-    <% @technology.projects.each do |project| %>
+  <% @technology.projects.each do |project| %>
+    <div class="col-12 col-sm-6 col-md-4">
       <%= render 'project-card', project: project %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

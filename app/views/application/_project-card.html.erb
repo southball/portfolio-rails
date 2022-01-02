@@ -3,7 +3,7 @@
     <h5 class="card-title">
       <%= link_to project.title, project %>
       <% project.technologies.each do |technology| %>
-        <a href="<%= technology_path technology %>">
+        <a href="<%= technology_path technology %>" title="<%= technology.name %>" style="text-decoration: none;">
           <img src="<%= technology.icon_url %>" alt="<%= technology.name %>" style="width: 24px; height: 24px;" />
         </a>
       <% end %>
