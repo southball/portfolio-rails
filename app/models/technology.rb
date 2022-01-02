@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Technology < ApplicationRecord
+  extend FriendlyId
+  friendly_id :slug, use: %i[finders slugged]
+
   validates :name, presence: true
   validates :slug, presence: true, uniqueness: true
   validates :icon_url, presence: true
