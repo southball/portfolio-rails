@@ -57,6 +57,7 @@ gem 'friendly_id', '~> 5.4.0'
 # gem "image_processing", "~> 1.2"
 
 gem 'rubocop', require: false
+gem 'rubocop-minitest', require: false
 gem 'rubocop-rails', require: false
 
 group :development, :test do
