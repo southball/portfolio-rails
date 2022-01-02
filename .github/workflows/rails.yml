@@ -28,3 +28,19 @@ jobs:
           bundler-cache: true
       - name: Run tests
         run: bundle exec rails test
+
+  deploy:
+    runs-on: ubuntu-latest
+    #if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
+        with:
+          ruby-version: 3.0 # Override .ruby-version as Ruby 3.0.3 is not supported
+          bundler-cache: true
+      - uses: miloserdow/capistrano-deploy@master
+        with:
+          target: production
+          deploy_key: ${{ secrets.DEPLOY_ENC_KEY }}
