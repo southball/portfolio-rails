@@ -9,5 +9,6 @@ class Project < ApplicationRecord
 
   has_many :project_technologies, dependent: :destroy
   has_many :technologies, through: :project_technologies
-  has_many :project_urls, dependent: :destroy
+  has_many :urls, class_name: 'ProjectUrl', dependent: :destroy
+  has_many :screenshots, class_name: 'ProjectScreenshot', dependent: :destroy
 end

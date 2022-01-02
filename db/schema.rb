@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_02_095203) do
+ActiveRecord::Schema.define(version: 2022_01_02_141042) do
+
+  create_table "project_screenshots", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "url"
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_project_screenshots_on_project_id"
+  end
 
   create_table "project_technologies", force: :cascade do |t|
     t.integer "project_id", null: false
@@ -49,6 +58,7 @@ ActiveRecord::Schema.define(version: 2022_01_02_095203) do
     t.index ["slug"], name: "index_technologies_on_slug", unique: true
   end
 
+  add_foreign_key "project_screenshots", "projects"
   add_foreign_key "project_technologies", "projects"
   add_foreign_key "project_technologies", "technologies"
   add_foreign_key "project_urls", "projects"
