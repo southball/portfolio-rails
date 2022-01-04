@@ -6,28 +6,33 @@ end
 
 technology_react = Technology.create! name: 'React',
                                       slug: 'react',
-                                      icon_url: image_path('react.svg'),
+                                      icon_url: image_path('technologies/react.svg'),
                                       url: 'https://reactjs.org/'
 
 technology_redux = Technology.create! name: 'Redux',
                                       slug: 'redux',
-                                      icon_url: image_path('redux.svg'),
+                                      icon_url: image_path('technologies/redux.svg'),
                                       url: 'https://redux.js.org/'
+
+technology_bootstrap = Technology.create! name: 'Bootstrap',
+                                          slug: 'bootstrap',
+                                          icon_url: image_path('technologies/bootstrap.svg'),
+                                          url: 'https://getbootstrap.com/'
 
 technology_mui = Technology.create! name: 'MUI',
                                     slug: 'mui',
-                                    icon_url: image_path('mui.svg'),
+                                    icon_url: image_path('technologies/mui.svg'),
                                     url: 'https://mui.com/'
 
 technology_rails = Technology.create! name: 'Ruby on Rails',
                                       slug: 'rails',
-                                      icon_url: image_path('rails.jpg'),
+                                      icon_url: image_path('technologies/rails.jpg'),
                                       url: 'https://rubyonrails.org/'
 
 project_portfolio_rails = Project.create! title: 'Portfolio',
                                           slug: 'portfolio-rails',
                                           description: 'This portfolio website.',
-                                          technologies: [technology_rails]
+                                          technologies: [technology_rails, technology_bootstrap]
 project_portfolio_rails.urls.create! title: 'GitHub',
                                      url: 'https://github.com/southball/portfolio-rails'
 project_portfolio_rails.screenshots.create! url: image_path('screenshots/portfolio.png')
