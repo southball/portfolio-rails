@@ -1,8 +1,8 @@
 <% provide :title, "Project: #{@project.title}" %>
 
-<h1><%= @project.title %></h1>
+<h1 class="fs-3"><small class="text-muted">Project:</small> <%= @project.title %></h1>
 
-<h2>Built with:</h2>
+<h2 class="fs-5">Built with:</h2>
 <ul>
   <% @project.technologies.each do |technology| %>
     <li>
@@ -15,7 +15,7 @@
 </ul>
 
 <% if not @project.urls.blank? %>
-  <h2>Links</h2>
+  <h2 class="fs-5">Links</h2>
   <ul>
     <% @project.urls.each do |project_url| %>
       <li><%= link_to project_url.title, project_url.url %></li>
@@ -24,7 +24,7 @@
 <% end %>
 
 <% unless @project.screenshots.blank? %>
-  <h2>Screenshots</h2>
+  <h2 class="fs-5">Screenshots</h2>
   <ul>
     <div id="carousel-screenshots" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
